@@ -1,0 +1,44 @@
+/* src/styles/GeneralInfo.module.css */
+.generalInfoContainer {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.generalInfoContainer h2 {
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.infoDisplay {
+    margin-top: 15px;
+    padding: 10px;
+    border: 1px dashed #ddd;
+    background-color: #eef;
+    border-radius: 4px;
+}
+
+.infoDisplay p {
+    margin-bottom: 5px;
+}
+
+.infoDisplay strong {
+    color: #555;
+}
+
+.editButton, .submitButton {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.editButton:hover, .submitButton:hover {
+    background-color: #0056b3;
+}

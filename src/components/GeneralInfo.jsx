@@ -1,65 +1,47 @@
-import React, { useState } from "react";
-import InputField from "./InputField.jsx";
-import styles from "../styles/GeneralInfo.module.css";
-export default function GeneralInfo() {
-  const [personData, setPersonData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-  });
-  const [isEditing, setIsEditing] = useState(true);
-  const handleChange = (e) => {
+import React from 'react';
+import InputField from './InputField';
+import styles from '../styles/GeneralInfo.module.css';
+
+function GeneralInfo({ data, isEditing, onFieldChange }) {
+  const handleInputChange = (e) => {
     const { name, value } = e.target;
-    setPersonData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
-  };
-  const handleEdit = () => {
-    setIsEditing(!isEditing);
+    onFieldChange(name, value);
   };
 
   return (
     <div className={styles.generalInfoContainer}>
-      <h2>General Information</h2>
       {isEditing ? (
-        <div>
+        <div className={styles.formContainer}>
           <InputField
             label="Full Name"
             name="name"
-            type="text"
-            value={personData.name}
-            onChange={handleChange}
-            />
+            value={data.name}
+            onChange={handleInputChange}
+          />
           <InputField
-            label="E-Mail"
+            label="Email Address"
             name="email"
-            type="e-mail"
-            value={personData.email}
-            onChange={handleChange}
-            />
+            type="email"
+            value={data.email}
+            onChange={handleInputChange}
+          />
           <InputField
-            label="Phone"
+            label="Phone Number"
             name="phone"
-            type="phone"
-            value={personData.phone}
-            onChange={handleChange}
+            type="tel"
+            value={data.phone}
+            onChange={handleInputChange}
           />
         </div>
       ) : (
-        <div>
-          <p>
-            <strong>Name:</strong> {personData.name}
-          </p>
-          <p>
-            <strong>Email:</strong> {personData.email}
-          </p>
-          <p>
-            <strong>Phone:</strong> {personData.phone}
-          </p>
+        <div className={styles.infoDisplay}>
+          <p><strong>Name:</strong> {data.name}</p>
+          <p><strong>Email:</strong> {data.email}</p>
+          <p><strong>Phone:</strong> {data.phone}</p>
         </div>
       )}
-      <button onClick={handleEdit}>{isEditing ? "Save" : "Edit"}</button>
     </div>
   );
 }
+
+export default GeneralInfo;

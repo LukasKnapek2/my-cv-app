@@ -1,0 +1,17 @@
+.sectionContainer {
+  border: 1px solid #e0e0e0;
+  padding: 25px;
+  margin-bottom: 30px;
+  border-radius: 8px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.sectionTitle {
+  color: #0056b3;
+  margin-top: 0;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 15px;
+  font-size: 1.8rem;
+}

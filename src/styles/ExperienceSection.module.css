@@ -1,0 +1,78 @@
+.noEntriesMessage {
+  color: #666;
+  font-style: italic;
+  padding: 15px;
+  border: 1px dashed #ddd;
+  border-radius: 6px;
+  background-color: #fcfcfc;
+  text-align: center;
+}
+
+.experienceEntryEdit {
+  border: 1px dashed #c0e0ff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  background-color: #f0f8ff;
+  position: relative;
+}
+
+.deleteButton {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.deleteButton:hover {
+  background-color: #c82333;
+}
+
+.addButton {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.addButton:hover {
+  background-color: #218838;
+}
+
+.experienceEntryView {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+}
+
+.experienceEntryView:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.experienceEntryView h3 {
+  color: #0056b3;
+  margin-top: 0;
+  margin-bottom: 5px;
+  font-size: 1.25rem;
+}
+
+.experienceEntryView .dates {
+  font-style: italic;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+.experienceEntryView p {
+  line-height: 1.6;
+  margin-bottom: 5px;
+}
